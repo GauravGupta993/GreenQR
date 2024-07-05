@@ -1,0 +1,62 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <script src="/docs/5.3/assets/js/color-modes.js"></script>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Update Records</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  </head>
+  <body class="bg-body-tertiary">
+    <div >
+      <nav class="navbar bg-body-tertiary">
+          <div class="container-fluid">
+            <a class=" btn btn-outline-primary" role="button" href="/dashboard">Dashboard</a>
+            <div class="d-flex me-2">
+              <div class="nav-item">
+                  <a class=" btn btn-outline-dark" role="button" href="/logout">Logout</a>
+              </div>
+          </div>
+          </div>
+        </nav>
+
+  </div>
+    <div class="container my-3">
+        <h2>Update Record</h2>
+        <form action="/view/update/{{record.uid}}" method="POST">
+            <div class="mb-3">
+                <label for="scientific_name" class="form-label">Scientific Name</label>
+                <input type="text" class="form-control" value="{{record.scientific_name}}" name="scientific_name" id="scientific_name" > 
+            </div>
+            <div class="mb-3" >
+                <label for="common_name" class="form-label">Common Name</label>
+                <input type="text" class="form-control" value="{{record.common_name}}" name="common_name" id="common_name">
+            </div>
+            <div class="mb-3">
+                <label for="flowering_time" class="form-label">Flowering Time</label>
+                <input type="text" class="form-control" value="{{record.flowering_time}}" name="flowering_time"
+                    id="flowering_time">
+            </div>
+            <div class="mb-3">
+              <label for="identifying_characters" class="form-label">Identifying Characters</label>
+              <input type="text" class="form-control" value="{{record.identifying_characters}}" name="identifying_characters"
+                  id="identifying_characters">
+          </div>
+          <div class="mb-3">
+            <label for="economic_importance" class="form-label">Economic Importance</label>
+            <input type="text" class="form-control" value="{{record.economic_importance}}" name="economic_importance"
+                id="economic_importance">
+        </div>
+    
+            <button type="submit" class="btn btn-dark">Update</button>
+            <a role="button" href="/view" class="btn btn-dark">Discard Changes</a>
+        </form>
+    </div>
+  </body>
+</html>

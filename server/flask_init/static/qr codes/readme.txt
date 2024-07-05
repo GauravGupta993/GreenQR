@@ -1,0 +1,1 @@
+In this folder qr codes generated are stored so that they can be downloaded on demand of user. 
