@@ -5,6 +5,7 @@ import Header from "./Components/Header";
 import Home from "./Components/Home";
 import Scan from "./Components/Scan";
 import Feedback from "./Components/Feedback";
+import Content from "./Components/Content";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/scan" element={<Scan />} />
         <Route path="/feedback" element={<Feedback />} />
+        <Route path="/content" element={<Content />} />
       </Routes>
     </div>
   );
