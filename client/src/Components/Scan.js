@@ -1,9 +1,35 @@
-import * as React from "react";
+// @ts-check
 
-function Scan() {
+import React, { useState } from 'react';
+// import HowToUse from './HowToUse.jsx';
+import Html5QrcodePlugin from './H.js';
+import ResultContainerPlugin from './R.js';
+
+const App = (props) => {
+    const [decodedResults, setDecodedResults] = useState([]);
+    const onNewScanResult = (decodedText, decodedResult) => {
+        console.log("App [result]", decodedResult);
+        setDecodedResults(prev => [...prev, decodedResult]);
+    };
+
     return (
-        <div> Scan </div>
+        <div className="App">
+            <section className="App-section">
+                <div className="App-section-title"> Html5-qrcode React demo</div>
+                <br />
+                <br />
+                <br />
+                <Html5QrcodePlugin
+                    fps={10}
+                    qrbox={250}
+                    disableFlip={false}
+                    qrCodeSuccessCallback={onNewScanResult}
+                />
+                <ResultContainerPlugin results={decodedResults} />
+                {/* <HowToUse /> */}
+            </section>
+        </div>
     );
-  }
-  export default Scan;
-  
+};
+
+export default App;

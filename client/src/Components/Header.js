@@ -19,17 +19,15 @@ function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
 
   const handleOpenNavMenu = (event) => {
-    alert(event);
     setAnchorElNav(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
-    // <Link to={`contacts/1`}></Link>
     setAnchorElNav(null);
   };
 
   return (
-    <AppBar position="static">
+    <AppBar disableUnd textDecoration="none" sx={{ boxShadow: 3}} position="static">
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           <Typography
@@ -44,13 +42,13 @@ function Header() {
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
-              textDecoration: "none",
+              textDecoration: "none"
             }}
           >
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+            <Avatar alt="Logo" src={"/tree.jpg"}/>
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
             <IconButton
               size="large"
               onClick={handleOpenNavMenu}
@@ -62,26 +60,26 @@ function Header() {
               id="menu-appbar"
               anchorEl={anchorElNav}
               anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
+                vertical: 'bottom',
+                horizontal: 'left',
               }}
               keepMounted
               transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
+                vertical: 'top',
+                horizontal: 'left',
               }}
               open={Boolean(anchorElNav)}
               onClose={handleCloseNavMenu}
               sx={{
-                display: { xs: "block", md: "none" },
+                display: { xs: 'block', md: 'none' },
               }}
             >
               {pages.map((page) => (
-                <Link to={page[1]}>
                 <MenuItem key={page[0]} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page[0]}</Typography>
+                  <Link style={{textDecoration:"none"}} to={page[1]}>
+                  <Typography textAlign="center" color="primary" sx={{fontSize:"25px", fontWeight:"Bold"}}>{page[0]}</Typography>
+                  </Link>
                 </MenuItem>
-                </Link>
               ))}
             </Menu>
           </Box>
@@ -91,8 +89,9 @@ function Header() {
               <Link to={page[1]}>
               <Button
                 key={page[0]}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                variant="outlined" 
+                size="large"
+                sx={{ my: 2, fontSize:"20px", color:"white"}}
               >
                 {page[0]}
               </Button>
