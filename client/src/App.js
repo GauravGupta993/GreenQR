@@ -10,8 +10,8 @@ function App() {
       <Routes>
         <Route path="/" element={<LandingPage />} />
         <Route path="/scan" element={<Scan />} />
-        {/* <Route path="/feedback" element={<Feedback />} />
-        <Route path="/content" element={<Content />} /> */}
+        {/* <Route path="/feedback" element={<Feedback />} /> */}
+        <Route path="/content" element={<Content />} />
       </Routes>
     </div>
   );
