@@ -1,21 +1,21 @@
 import "./App.css";
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Header from "./Components/Header";
-import Home from "./Components/Home";
-import Scan from "./Components/Scan";
-import Feedback from "./Components/Feedback";
-import Content from "./Components/Content";
+import Header from "./components/Header";
+import Home from "./components/Home";
+import Scan from "./components/Scan";
+import Feedback from "./components/Feedback";
+import Content from "./components/Content";
+import LandingPage from './LandingPage';
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<LandingPage />} />
         <Route path="/scan" element={<Scan />} />
-        <Route path="/feedback" element={<Feedback />} />
-        <Route path="/content" element={<Content />} />
+        {/* <Route path="/feedback" element={<Feedback />} />
+        <Route path="/content" element={<Content />} /> */}
       </Routes>
     </div>
   );
