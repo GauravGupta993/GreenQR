@@ -58,32 +58,14 @@ export default function Footer() {
           <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
             <SitemarkIcon />
             <Typography variant="body2" gutterBottom sx={{ fontWeight: 600, mt: 2 }}>
-              Join the newsletter
+              Have a QR?
             </Typography>
             <Typography variant="body2" sx={{ color: 'text.secondary', mb: 2 }}>
-              Subscribe for weekly updates. No spams ever!
+              Scan now and get in-depth details!
             </Typography>
             <Stack direction="row" spacing={1} useFlexGap>
-              <InputLabel htmlFor="email-newsletter" sx={visuallyHidden}>
-                Email
-              </InputLabel>
-              <TextField
-                id="email-newsletter"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                slotProps={{
-                  htmlInput: {
-                    autoComplete: 'off',
-                    'aria-label': 'Enter your email address',
-                  },
-                }}
-              />
               <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
+                Scan Tree QR Code
               </Button>
             </Stack>
           </Box>
