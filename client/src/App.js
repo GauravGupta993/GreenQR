@@ -3,6 +3,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Scan from "./Components/Scan";
 import LandingPage from './LandingPage';
+import Content from './Components/Content';
 
 function App() {
   return (
