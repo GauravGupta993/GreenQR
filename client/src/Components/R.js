@@ -21,9 +21,9 @@ const ResultContainerTable = ({ data }) => {
         <table className={'Qrcode-result-table'}>
             <thead>
                 <tr>
-                    <td>#</td>
-                    <td>Decoded Text</td>
-                    <td>Format</td>
+                    {/* <td>#</td> */}
+                    {/* <td>Decoded Text</td> */}
+                    {/* <td>Format</td> */}
                 </tr>
             </thead>
             <tbody>
