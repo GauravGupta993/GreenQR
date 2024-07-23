@@ -23,8 +23,8 @@ function Content() {
         throw new Error("Network response was not ok");
       }
       const data = await response.json();
-      // console.log(data);
       setData(data);
+      console.log(data);
     } catch (error) {
       console.error("Error:", error);
     }
@@ -95,7 +95,7 @@ function Content() {
       <Box component="div" sx={{ whiteSpace: "normal" }}>
       {Data.economic_importance}
       </Box> */}
-      <Box sx={{ minWidth: 275, mx:10 }}>
+      <Box sx={{ minWidth: 275 }}>
         <Card variant="outlined">{card}</Card>
       </Box>
     </>
