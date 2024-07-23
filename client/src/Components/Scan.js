@@ -11,18 +11,18 @@ const App = (props) => {
     const [decodedResults, setDecodedResults] = useState([]);
     const onNewScanResult = (decodedText, decodedResult) => {
         console.log("App [result]", decodedResult);
-        setDecodedResults(prev => [...prev, decodedResult]);
+        // setDecodedResults(prev => [...prev, decodedResult]);
         // alert(decodedResult.results);
         const temp=decodedResult.decodedText;
         // alert(decodedResult);
-        console.log(decodedResult.decodedText);
+        // console.log(decodedResult.decodedText);
         navigate("/content",{state:{id:`${temp}`,name:'sabaoon'}});
     };
 
     return (
         <div className="App">
             <section className="App-section">
-                <div className="App-section-title"> Tree QR Scanner</div>
+                <div className="App-section-title">Green QR</div>
                 <br />
                 <br />
                 <br />
